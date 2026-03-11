@@ -1,6 +1,6 @@
 'use client';
 
-import { Phone, MessageCircle, CalendarCheck } from 'lucide-react';
+import { Phone, Send, CalendarCheck } from 'lucide-react';
 import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -22,13 +22,13 @@ export default function MobileStickyBar() {
                 <div className="w-px h-8 bg-white/10" />
 
                 <a
-                    href="https://wa.me/998555190005"
+                    href="https://t.me/mirkomil_ablayev"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex flex-col items-center justify-center text-slate-300 hover:text-[#25D366] transition-colors group"
+                    className="flex-1 flex flex-col items-center justify-center text-slate-300 hover:text-[#2AABEE] transition-colors group"
                 >
-                    <MessageCircle className="w-5 h-5 mb-1 group-hover:scale-110 transition-transform" />
-                    <span className="text-[10px] uppercase font-medium tracking-widest opacity-80">{t.mobileBar.whatsapp}</span>
+                    <Send className="w-5 h-5 mb-1 group-hover:scale-110 transition-transform" />
+                    <span className="text-[10px] uppercase font-medium tracking-widest opacity-80">{t.contact.telegram}</span>
                 </a>
 
                 <div className="w-px h-8 bg-white/10" />
