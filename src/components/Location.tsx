@@ -24,7 +24,7 @@ export default function Location() {
                 <div className="relative w-full h-[600px] rounded-xl overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.5)] border border-white/5 reveal opacity-0" style={{ animationDelay: '0.2s' }}>
                     <div className="absolute inset-0 pointer-events-none z-10 shadow-[inset_0_0_50px_rgba(11,19,32,0.5)]" />
                     <iframe
-                        src="https://yandex.uz/map-widget/v1/?ll=69.264784,41.271110&z=16&pt=69.264784,41.271110,pm2rdm"
+                        src="https://maps.google.com/maps?q=Toshkent,%20Yakkasaroy%20tumani,%20Damariq%20mahalla&t=&z=15&ie=UTF8&iwloc=&output=embed"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
