@@ -87,7 +87,7 @@ export default function Location() {
                                     <MessageCircle className="w-5 h-5 text-slate-400 group-hover:text-[#25D366] transition-colors" strokeWidth={1.5} />
                                 </a>
                                 <a
-                                    href="https://instagram.com"
+                                    href="https://www.instagram.com/afrosiyob.hotel/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="p-3 bg-background/50 border border-white/10 hover:border-pink-500 hover:bg-pink-500/10 rounded-lg transition-all group"
