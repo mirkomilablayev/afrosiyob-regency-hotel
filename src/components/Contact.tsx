@@ -1,6 +1,6 @@
 'use client';
 
-import { Phone, MapPin, MessageCircle } from 'lucide-react';
+import { Phone, MapPin, MessageCircle, Send } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 export default function Contact() {
@@ -80,6 +80,16 @@ export default function Contact() {
                                 >
                                     <MessageCircle className="w-5 h-5 mr-4 text-[#25D366] group-hover:scale-110 transition-transform" />
                                     {t.contact.whatsapp}
+                                </a>
+
+                                <a
+                                    href="https://t.me/mirkomil_ablayev"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex font-medium tracking-widest uppercase text-sm items-center justify-center w-full py-5 px-6 bg-[#2AABEE]/10 border border-[#2AABEE]/20 hover:border-[#2AABEE] text-white rounded transition-all duration-300 hover:shadow-[0_0_20px_rgba(42,171,238,0.2)] group"
+                                >
+                                    <Send className="w-5 h-5 mr-4 text-[#2AABEE] group-hover:scale-110 transition-transform" />
+                                    {t.contact.telegram}
                                 </a>
                             </div>
                         </div>
