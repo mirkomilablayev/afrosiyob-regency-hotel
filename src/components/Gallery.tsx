@@ -7,12 +7,12 @@ export default function Gallery() {
     const { t } = useLanguage();
 
     const images = [
-        { id: 1, src: '/images/gallery_1.png', alt: 'Hotel Lobby' },
-        { id: 2, src: '/images/gallery_2.png', alt: 'Restaurant Area' },
-        { id: 3, src: '/images/gallery_3.png', alt: 'Luxury Spa' },
-        { id: 4, src: '/images/gallery_4.png', alt: 'Buffet Breakfast' },
-        { id: 5, src: '/images/gallery_5.png', alt: 'Fitness Center' },
-        { id: 6, src: '/images/gallery_6.png', alt: 'Sunset View' },
+        { id: 1, src: '/images/gallery_1.png', alt: t.gallery.images.lobby },
+        { id: 2, src: '/images/gallery_2.png', alt: t.gallery.images.restaurant },
+        { id: 3, src: '/images/gallery_3.png', alt: t.gallery.images.spa },
+        { id: 4, src: '/images/gallery_4.png', alt: t.gallery.images.breakfast },
+        { id: 5, src: '/images/gallery_5.png', alt: t.gallery.images.fitness },
+        { id: 6, src: '/images/gallery_6.png', alt: t.gallery.images.sunset },
     ];
 
     return (

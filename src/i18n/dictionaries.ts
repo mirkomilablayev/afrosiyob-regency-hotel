@@ -45,9 +45,9 @@ export const dictionaries = {
             from: "dan",
             night: "/ kecha",
             types: {
-                double: "Ikki kishilik xona (Double)",
-                twin: "Ikki kishilik xona (Twin)",
-                deluxe: "Lyuks xona (Deluxe)"
+                double: "Ikki kishilik xona",
+                twin: "Ikki yotoqli xona",
+                deluxe: "Lyuks xona"
             },
             features: {
                 kingBed: "Katta yotoq (King-size)",
@@ -75,7 +75,15 @@ export const dictionaries = {
         gallery: {
             tag: "Kashf eting",
             title: "Fotogalereya",
-            desc: "Afrosiyob Regency mehmonxonasining go'zalligini fotogalereyamiz orqali o'rganing va o'z orzuingizdagi ta'tilni tasavvur qiling."
+            desc: "Afrosiyob Regency mehmonxonasining go'zalligini fotogalereyamiz orqali o'rganing va o'z orzuingizdagi ta'tilni tasavvur qiling.",
+            images: {
+                lobby: "Mehmonxona foyesi",
+                restaurant: "Restoran hududi",
+                spa: "Hashamatli Spa",
+                breakfast: "Shved stoli nonushtasi",
+                fitness: "Fitnes markazi",
+                sunset: "Quyosh botish manzarasi"
+            }
         },
         booking: {
             tag: "Band qilish",
@@ -202,7 +210,15 @@ export const dictionaries = {
         gallery: {
             tag: "Discover",
             title: "Photo Gallery",
-            desc: "Explore the beauty of Afrosiyob Regency Hotel through our photo gallery and imagine your perfect stay."
+            desc: "Explore the beauty of Afrosiyob Regency Hotel through our photo gallery and imagine your perfect stay.",
+            images: {
+                lobby: "Hotel Lobby",
+                restaurant: "Restaurant Area",
+                spa: "Luxury Spa",
+                breakfast: "Buffet Breakfast",
+                fitness: "Fitness Center",
+                sunset: "Sunset View"
+            }
         },
         booking: {
             tag: "Reservation",
@@ -329,7 +345,15 @@ export const dictionaries = {
         gallery: {
             tag: "Узнайте",
             title: "Фотогалерея",
-            desc: "Изучите красоту отеля Afrosiyob Regency через нашу фотогалерею и представьте свое идеальное пребывание."
+            desc: "Изучите красоту отеля Afrosiyob Regency через нашу фотогалерею и представьте свое идеальное пребывание.",
+            images: {
+                lobby: "Лобби отеля",
+                restaurant: "Территория ресторана",
+                spa: "Роскошный Спа",
+                breakfast: "Завтрак Шведский стол",
+                fitness: "Фитнес-центр",
+                sunset: "Вид на закат"
+            }
         },
         booking: {
             tag: "Бронирование",
