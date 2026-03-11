@@ -24,7 +24,7 @@ export default function Location() {
                 <div className="relative w-full h-[600px] rounded-xl overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.5)] border border-white/5 reveal opacity-0" style={{ animationDelay: '0.2s' }}>
                     <div className="absolute inset-0 pointer-events-none z-10 shadow-[inset_0_0_50px_rgba(11,19,32,0.5)]" />
                     <iframe
-                        src="https://maps.google.com/maps?q=Toshkent,%20Yakkasaroy%20tumani,%20Damariq%20mahalla&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.!2d69.2621501!3d41.271237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8aa211cf252d:0x2116290f74502dfd!2sAfrosiyob+Regency+Hotel!5e0!3m2!1sen!2suz!4v1"
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
