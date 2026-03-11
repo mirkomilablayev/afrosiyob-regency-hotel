@@ -116,18 +116,34 @@ export default function Reviews() {
                                 key={idx}
                                 onClick={() => setActiveIdx(idx)}
                                 className={`rounded-full transition-all duration-300 ${idx === activeIdx
-                                        ? 'w-6 h-2 bg-goldPrimary shadow-[0_0_8px_rgba(212,175,55,0.6)]'
-                                        : 'w-2 h-2 bg-white/20 hover:bg-white/40'
+                                    ? 'w-6 h-2 bg-goldPrimary shadow-[0_0_8px_rgba(212,175,55,0.6)]'
+                                    : 'w-2 h-2 bg-white/20 hover:bg-white/40'
                                     }`}
                                 aria-label={`Review ${idx + 1}`}
                             />
                         ))}
                     </div>
 
-                    {/* Swipe hint on first load */}
-                    <p className="text-center text-slate-500 text-xs tracking-widest uppercase mt-4">
-                        ← swipe →
-                    </p>
+                    {/* Prev / Next buttons */}
+                    <div className="flex items-center justify-between mt-6 gap-4">
+                        <button
+                            onClick={() => setActiveIdx(prev => Math.max(prev - 1, 0))}
+                            disabled={activeIdx === 0}
+                            className="flex-1 py-3 rounded border border-white/10 text-sm font-semibold uppercase tracking-widest text-white transition-all duration-300 disabled:opacity-25 disabled:cursor-not-allowed hover:enabled:border-goldPrimary hover:enabled:text-goldPrimary"
+                        >
+                            ← Prev
+                        </button>
+                        <span className="text-slate-500 text-xs font-medium shrink-0">
+                            {activeIdx + 1} / {reviews.length}
+                        </span>
+                        <button
+                            onClick={() => setActiveIdx(prev => Math.min(prev + 1, reviews.length - 1))}
+                            disabled={activeIdx === reviews.length - 1}
+                            className="flex-1 py-3 rounded border border-white/10 text-sm font-semibold uppercase tracking-widest text-white transition-all duration-300 disabled:opacity-25 disabled:cursor-not-allowed hover:enabled:border-goldPrimary hover:enabled:text-goldPrimary"
+                        >
+                            Next →
+                        </button>
+                    </div>
                 </div>
 
                 {/* ── DESKTOP: 3-column grid ── */}

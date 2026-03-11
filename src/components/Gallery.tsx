@@ -32,9 +32,9 @@ export default function Gallery() {
                 </div>
 
                 {/* Mobile: equal 2-column grid */}
-                <div className="grid grid-cols-2 gap-3 lg:hidden reveal opacity-0" style={{ animationDelay: '0.2s' }}>
+                <div className="grid grid-cols-2 gap-2 lg:hidden reveal opacity-0" style={{ animationDelay: '0.2s' }}>
                     {images.map((img) => (
-                        <div key={img.id} className="relative aspect-square overflow-hidden group rounded-sm bg-cardBg">
+                        <div key={img.id} className="relative h-[150px] overflow-hidden group rounded-sm bg-cardBg">
                             <Image
                                 src={img.src}
                                 alt={img.alt}
