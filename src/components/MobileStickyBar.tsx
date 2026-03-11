@@ -22,7 +22,7 @@ export default function MobileStickyBar() {
                 <div className="w-px h-8 bg-white/10" />
 
                 <a
-                    href="https://t.me/mirkomil_ablayev"
+                    href="https://t.me/afrosiyob_regency"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 flex flex-col items-center justify-center text-slate-300 hover:text-[#2AABEE] transition-colors group"

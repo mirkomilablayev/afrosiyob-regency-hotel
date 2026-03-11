@@ -69,7 +69,7 @@ export default function Location() {
                                     <Phone className="w-5 h-5 text-slate-400 group-hover:text-goldPrimary transition-colors" strokeWidth={1.5} />
                                 </a>
                                 <a
-                                    href="https://t.me/mirkomil_ablayev"
+                                    href="https://t.me/afrosiyob_regency"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="p-3 bg-background/50 border border-white/10 hover:border-[#2AABEE] hover:bg-[#2AABEE]/10 rounded-lg transition-all group"
