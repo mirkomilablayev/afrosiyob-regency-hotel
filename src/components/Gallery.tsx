@@ -31,28 +31,42 @@ export default function Gallery() {
                     <div className="w-20 h-px bg-goldPrimary mx-auto"></div>
                 </div>
 
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[250px] md:auto-rows-[350px] reveal opacity-0" style={{ animationDelay: '0.2s' }}>
+                {/* Mobile: equal 2-column grid */}
+                <div className="grid grid-cols-2 gap-3 lg:hidden reveal opacity-0" style={{ animationDelay: '0.2s' }}>
+                    {images.map((img) => (
+                        <div key={img.id} className="relative aspect-square overflow-hidden group rounded-sm bg-cardBg">
+                            <Image
+                                src={img.src}
+                                alt={img.alt}
+                                fill
+                                sizes="50vw"
+                                className="object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-700" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex items-end p-4">
+                                <span className="text-white font-serif text-sm tracking-wide opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-700">
+                                    {img.alt}
+                                </span>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Desktop: asymmetric masonry layout */}
+                <div className="hidden lg:grid lg:grid-cols-4 gap-4 auto-rows-[350px] reveal opacity-0" style={{ animationDelay: '0.2s' }}>
                     {images.map((img, i) => {
-                        // Elegant masonry-like layout
-                        let colSpan = 'col-span-1 lg:col-span-1';
+                        let colSpan = 'lg:col-span-1';
                         let rowSpan = 'row-span-1';
-                        if (i === 0) {
-                            colSpan = 'col-span-2 lg:col-span-2';
-                            rowSpan = 'row-span-2';
-                        } else if (i === 3) {
-                            colSpan = 'col-span-2 lg:col-span-2';
-                        }
+                        if (i === 0) { colSpan = 'lg:col-span-2'; rowSpan = 'row-span-2'; }
+                        else if (i === 3) { colSpan = 'lg:col-span-2'; }
 
                         return (
-                            <div
-                                key={img.id}
-                                className={`relative overflow-hidden group rounded-sm bg-cardBg ${colSpan} ${rowSpan}`}
-                            >
+                            <div key={img.id} className={`relative overflow-hidden group rounded-sm bg-cardBg ${colSpan} ${rowSpan}`}>
                                 <Image
                                     src={img.src}
                                     alt={img.alt}
                                     fill
-                                    sizes="(max-width: 1024px) 100vw, 50vw"
+                                    sizes="(max-width: 1024px) 50vw, 33vw"
                                     className="object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-700" />
