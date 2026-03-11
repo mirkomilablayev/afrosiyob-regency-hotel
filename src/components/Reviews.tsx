@@ -44,13 +44,13 @@ export default function Reviews() {
     ];
 
     return (
-        <section id="reviews" className="py-32 bg-background relative border-b border-white/5">
+        <section id="reviews" className="py-12 md:py-32 bg-background relative border-b border-white/5">
             <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-goldPrimary/5 blur-[120px] rounded-full pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
 
                 {/* Header */}
-                <div className="flex flex-col lg:flex-row items-center justify-between mb-24 reveal opacity-0">
+                <div className="flex flex-col lg:flex-row items-center justify-between mb-10 md:mb-24 reveal opacity-0">
                     <div className="text-center lg:text-left mb-12 lg:mb-0">
                         <span className="text-goldPrimary font-semibold tracking-[0.2em] uppercase text-sm mb-6 block">
                             {t.reviews.tag}

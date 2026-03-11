@@ -16,7 +16,7 @@ export default function Highlights() {
     ];
 
     return (
-        <section id="highlights" className="py-32 bg-secondaryBg relative overflow-hidden">
+        <section id="highlights" className="py-12 md:py-32 bg-secondaryBg relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
                 <div className="text-center mb-20 reveal opacity-0">
                     <span className="text-goldPrimary font-semibold tracking-[0.2em] uppercase text-sm mb-4 block">

@@ -32,10 +32,10 @@ export default function Rooms() {
     ];
 
     return (
-        <section id="rooms" className="py-32 bg-secondaryBg border-y border-white/5">
+        <section id="rooms" className="py-12 md:py-32 bg-secondaryBg border-y border-white/5">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
-                <div className="text-center mb-24 max-w-3xl mx-auto reveal opacity-0">
+                <div className="text-center mb-10 md:mb-24 max-w-3xl mx-auto reveal opacity-0">
                     <span className="text-goldPrimary font-semibold tracking-[0.2em] uppercase text-sm mb-6 block">
                         {t.rooms.tag}
                     </span>

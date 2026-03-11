@@ -7,7 +7,7 @@ export default function Location() {
     const { t } = useLanguage();
 
     return (
-        <section id="location" className="py-32 bg-secondaryBg relative border-t border-white/5">
+        <section id="location" className="py-12 md:py-32 bg-secondaryBg relative border-t border-white/5">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
                 {/* Section header */}

@@ -7,7 +7,7 @@ export default function Contact() {
     const { t } = useLanguage();
 
     return (
-        <section id="contact" className="py-32 bg-background relative border-t border-white/5 overflow-hidden">
+        <section id="contact" className="py-12 md:py-32 bg-background relative border-t border-white/5 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-32">

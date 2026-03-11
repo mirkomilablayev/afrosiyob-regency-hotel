@@ -16,9 +16,9 @@ export default function Gallery() {
     ];
 
     return (
-        <section id="gallery" className="py-32 bg-secondaryBg relative">
+        <section id="gallery" className="py-12 md:py-32 bg-secondaryBg relative">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                <div className="text-center mb-24 reveal opacity-0">
+                <div className="text-center mb-10 md:mb-24 reveal opacity-0">
                     <span className="text-goldPrimary font-semibold tracking-[0.2em] uppercase text-sm mb-6 block">
                         {t.gallery.tag}
                     </span>
