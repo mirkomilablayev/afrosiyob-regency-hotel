@@ -12,8 +12,8 @@ interface LanguageContextProps {
 const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-    // Use 'uz' as default to match SSR HTML
-    const [language, setLanguageState] = useState<Language>('uz');
+    // Use 'ru' as default to match SSR HTML
+    const [language, setLanguageState] = useState<Language>('ru');
 
     // Load saved language on mount
     useEffect(() => {

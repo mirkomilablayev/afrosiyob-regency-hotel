@@ -45,7 +45,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="uz" className="scroll-smooth" suppressHydrationWarning>
+    <html lang="ru" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
