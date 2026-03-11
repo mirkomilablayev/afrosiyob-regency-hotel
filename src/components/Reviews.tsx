@@ -7,16 +7,11 @@ export default function Reviews() {
     const { t } = useLanguage();
 
     const reviews = [
-        {
-            id: 1,
-            text: t.reviews.review1,
-            author: t.reviews.author1
-        },
-        {
-            id: 2,
-            text: t.reviews.review2,
-            author: t.reviews.author2
-        }
+        { id: 1, text: t.reviews.review1, author: t.reviews.author1 },
+        { id: 2, text: t.reviews.review2, author: t.reviews.author2 },
+        { id: 3, text: t.reviews.review3, author: t.reviews.author3 },
+        { id: 4, text: t.reviews.review4, author: t.reviews.author4 },
+        { id: 5, text: t.reviews.review5, author: t.reviews.author5 }
     ];
 
     return (
@@ -25,7 +20,7 @@ export default function Reviews() {
 
             <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
 
-                <div className="flex flex-col lg:flex-row items-center justify-between mb-24 max-w-5xl mx-auto reveal opacity-0">
+                <div className="flex flex-col lg:flex-row items-center justify-between mb-24 max-w-7xl mx-auto reveal opacity-0">
                     <div className="text-center lg:text-left mb-12 lg:mb-0">
                         <span className="text-goldPrimary font-semibold tracking-[0.2em] uppercase text-sm mb-6 block">
                             {t.reviews.tag}
@@ -51,7 +46,7 @@ export default function Reviews() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
                     {reviews.map((review, idx) => (
                         <div
                             key={review.id}

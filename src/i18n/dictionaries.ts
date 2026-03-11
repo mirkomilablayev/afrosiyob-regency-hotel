@@ -70,7 +70,13 @@ export const dictionaries = {
             review1: "Toza xonalar va samimiy xodimlar. Juda qulay joylashuv.",
             author1: "Germaniyalik mehmon",
             review2: "Qulay yashash va doim yordamga tayyor xodimlar.",
-            author2: "Qozog'istonlik mehmon"
+            author2: "Qozog'istonlik mehmon",
+            review3: "Ajoyib xizmat ko'rsatish va chiroyli interyer. Shved stoli nonushtasi juda yoqdi.",
+            author3: "Rossiyalik mehmon",
+            review4: "Hashamatli tajriba. Spa va fitnes markazi a'lo darajada edi, xodimlar e'tiborli.",
+            author4: "BAA dan mehmon",
+            review5: "Ajoyib shahar manzarali katta xonalar. Dam olishingiz uchun kerak bo'lgan hamma narsa bor.",
+            author5: "Turkiyalik mehmon"
         },
         gallery: {
             tag: "Kashf eting",
@@ -205,7 +211,13 @@ export const dictionaries = {
             review1: "Clean rooms and friendly staff. Very convenient location.",
             author1: "Guest from Germany",
             review2: "Comfortable stay and helpful reception staff.",
-            author2: "Guest from Kazakhstan"
+            author2: "Guest from Kazakhstan",
+            review3: "Excellent service and beautiful interior. Really enjoyed the buffet breakfast.",
+            author3: "Guest from Russia",
+            review4: "A luxurious experience. The spa and fitness center were top-notch, and staff was attentive.",
+            author4: "Guest from UAE",
+            review5: "Spacious rooms with a great city view. Everything you need for a comfortable stay.",
+            author5: "Guest from Turkey"
         },
         gallery: {
             tag: "Discover",
@@ -340,7 +352,13 @@ export const dictionaries = {
             review1: "Чистые номера и приветливый персонал. Очень удобное расположение.",
             author1: "Гость из Германии",
             review2: "Комфортное пребывание и отзывчивый персонал на ресепшене.",
-            author2: "Гость из Казахстана"
+            author2: "Гость из Казахстана",
+            review3: "Отличное обслуживание и красивый интерьер. Очень понравился завтрак.",
+            author3: "Гость из России",
+            review4: "Роскошный опыт. Спа и фитнес-центр были на высшем уровне, персонал внимательный.",
+            author4: "Гость из ОАЭ",
+            review5: "Просторные номера с отличным видом на город. Есть все необходимое для комфортного проживания.",
+            author5: "Гость из Турции"
         },
         gallery: {
             tag: "Узнайте",
