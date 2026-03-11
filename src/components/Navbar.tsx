@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Phone, CheckCircle, ChevronDown } from 'lucide-react';
+import { Phone, CheckCircle } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 export default function Navbar() {
@@ -25,16 +25,20 @@ export default function Navbar() {
                 </Link>
                 <div className="flex space-x-4 items-center">
 
-                    <div className="relative group">
-                        <button className="flex items-center space-x-1 text-sm font-medium text-white hover:text-goldPrimary transition-colors">
-                            <span className="uppercase">{language}</span>
-                            <ChevronDown className="w-4 h-4" />
-                        </button>
-                        <div className="absolute right-0 top-full mt-2 w-20 bg-cardBg border border-white/10 rounded shadow-2xl py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-                            <button onClick={() => setLanguage('uz')} className="block w-full text-center px-4 py-2 text-sm text-textPrimary hover:bg-white/5 uppercase font-medium">UZ</button>
-                            <button onClick={() => setLanguage('en')} className="block w-full text-center px-4 py-2 text-sm text-textPrimary hover:bg-white/5 uppercase font-medium">EN</button>
-                            <button onClick={() => setLanguage('ru')} className="block w-full text-center px-4 py-2 text-sm text-textPrimary hover:bg-white/5 uppercase font-medium">RU</button>
-                        </div>
+                    {/* Premium language pill switcher */}
+                    <div className="flex items-center bg-white/5 border border-white/10 rounded-full p-0.5 backdrop-blur-sm">
+                        {(['ru', 'en', 'uz'] as const).map((lang) => (
+                            <button
+                                key={lang}
+                                onClick={() => setLanguage(lang)}
+                                className={`px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest transition-all duration-300 ${language === lang
+                                    ? 'bg-gradient-to-r from-goldPrimary to-goldButton text-white shadow-[0_0_10px_rgba(212,175,55,0.4)]'
+                                    : 'text-slate-400 hover:text-white'
+                                    }`}
+                            >
+                                {lang}
+                            </button>
+                        ))}
                     </div>
 
                     <a

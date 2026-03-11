@@ -12,9 +12,7 @@ export default function Reviews() {
         { id: 3, text: t.reviews.review3, author: t.reviews.author3 },
         { id: 4, text: t.reviews.review4, author: t.reviews.author4 },
         { id: 5, text: t.reviews.review5, author: t.reviews.author5 },
-        { id: 6, text: t.reviews.review6, author: t.reviews.author6 },
-        { id: 7, text: t.reviews.review7, author: t.reviews.author7 },
-        { id: 8, text: t.reviews.review8, author: t.reviews.author8 }
+        { id: 6, text: t.reviews.review6, author: t.reviews.author6 }
     ];
 
     return (
@@ -44,7 +42,7 @@ export default function Reviews() {
                                 <Star className="w-6 h-6 fill-current" strokeWidth={1} />
                                 <StarHalf className="w-6 h-6 fill-current" strokeWidth={1} />
                             </div>
-                            <span className="text-sm text-slate-400 font-medium tracking-wide">{t.reviews.overall} (8)</span>
+                            <span className="text-sm text-slate-400 font-medium tracking-wide">{t.reviews.overall} (6)</span>
                         </div>
                     </div>
                 </div>
