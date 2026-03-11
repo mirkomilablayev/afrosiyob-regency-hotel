@@ -65,12 +65,8 @@ export default function Footer() {
 
                 </div>
 
-                <div className="flex flex-col md:flex-row justify-between items-center text-sm font-light text-slate-500 tracking-wide">
+                <div className="flex justify-center items-center text-sm font-light text-slate-500 tracking-wide text-center">
                     <p>&copy; {new Date().getFullYear()} Afrosiyob Regency Hotel. {t.footer.rights}</p>
-                    <div className="mt-6 md:mt-0 space-x-8">
-                        <Link href="#" className="hover:text-goldPrimary transition-colors">{t.footer.privacy}</Link>
-                        <Link href="#" className="hover:text-goldPrimary transition-colors">{t.footer.terms}</Link>
-                    </div>
                 </div>
             </div>
         </footer>
