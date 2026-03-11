@@ -3,8 +3,9 @@
 import { useState } from 'react';
 import { Star, StarHalf } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+import { Dictionary } from '@/i18n/dictionaries';
 
-function ReviewCard({ review, t }: { review: { id: number; text: string; author: string }; t: any }) {
+function ReviewCard({ review, t }: { review: { id: number; text: string; author: string }; t: Dictionary }) {
     return (
         <div className="bg-cardBg border border-white/5 p-10 rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative overflow-hidden h-full flex flex-col">
             <div className="absolute -top-4 -left-2 text-9xl text-white/5 font-serif select-none pointer-events-none">&quot;</div>
@@ -93,8 +94,8 @@ export default function Reviews() {
                                 key={idx}
                                 onClick={() => setActiveIdx(idx)}
                                 className={`rounded-full transition-all duration-300 ${idx === activeIdx
-                                        ? 'w-6 h-2 bg-goldPrimary shadow-[0_0_8px_rgba(212,175,55,0.6)]'
-                                        : 'w-2 h-2 bg-white/20 hover:bg-white/40'
+                                    ? 'w-6 h-2 bg-goldPrimary shadow-[0_0_8px_rgba(212,175,55,0.6)]'
+                                    : 'w-2 h-2 bg-white/20 hover:bg-white/40'
                                     }`}
                                 aria-label={`Review ${idx + 1}`}
                             />
