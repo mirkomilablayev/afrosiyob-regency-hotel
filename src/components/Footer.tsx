@@ -7,12 +7,12 @@ export default function Footer() {
     const { t } = useLanguage();
 
     return (
-        <footer className="bg-secondaryBg text-slate-300 py-24 border-t border-white/5">
+        <footer className="bg-secondaryBg text-slate-300 py-12 md:py-24 border-t border-white/5">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 border-b border-white/10 pb-16 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-16 border-b border-white/10 pb-8 md:pb-16 mb-6 md:mb-12">
 
                     <div className="col-span-1 lg:col-span-2 pr-0 lg:pr-12">
-                        <h2 className="text-4xl font-serif text-white font-bold mb-8">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-white font-bold mb-4 md:mb-8">
                             Afrosiyob Regency
                         </h2>
                         <p className="text-slate-400 font-light text-lg max-w-md leading-relaxed">
@@ -21,7 +21,7 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="text-white font-serif text-xl mb-8 font-bold tracking-wide">{t.footer.quickLinks}</h4>
+                        <h4 className="text-white font-serif text-lg md:text-xl mb-4 md:mb-8 font-bold tracking-wide">{t.footer.quickLinks}</h4>
                         <ul className="space-y-5">
                             <li>
                                 <Link href="#home" className="text-slate-400 hover:text-goldPrimary transition-colors font-light tracking-wide">
@@ -47,7 +47,7 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <h4 className="text-white font-serif text-xl mb-8 font-bold tracking-wide">{t.footer.contact}</h4>
+                        <h4 className="text-white font-serif text-lg md:text-xl mb-4 md:mb-8 font-bold tracking-wide">{t.footer.contact}</h4>
                         <ul className="space-y-6">
                             <li className="text-slate-400 font-light leading-relaxed">
                                 {t.contact.addressText}

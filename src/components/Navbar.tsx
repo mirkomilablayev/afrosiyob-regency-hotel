@@ -18,20 +18,20 @@ export default function Navbar() {
     }, []);
 
     return (
-        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-background/80 backdrop-blur-xl shadow-2xl py-4 border-b border-white/5' : 'bg-transparent py-8'}`}>
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 flex justify-between items-center">
-                <Link href="/" className="text-2xl font-serif font-bold text-white tracking-wide">
+        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-background/80 backdrop-blur-xl shadow-2xl py-3 border-b border-white/5' : 'bg-transparent py-5'}`}>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+                <Link href="/" className="text-lg sm:text-2xl font-serif font-bold text-white tracking-wide whitespace-nowrap">
                     {t.navbar.brand}
                 </Link>
-                <div className="flex space-x-4 items-center">
+                <div className="flex items-center gap-2 sm:gap-4">
 
-                    {/* Premium language pill switcher — fixed-width cells to prevent layout shift */}
+                    {/* Language pill switcher */}
                     <div className="flex items-center bg-white/5 border border-white/10 rounded-full p-0.5 backdrop-blur-sm">
                         {(['ru', 'en', 'uz'] as const).map((lang) => (
                             <button
                                 key={lang}
                                 onClick={() => setLanguage(lang)}
-                                className={`w-9 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest transition-all duration-300 text-center ${language === lang
+                                className={`w-8 sm:w-9 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold uppercase tracking-widest transition-all duration-300 text-center ${language === lang
                                     ? 'bg-gradient-to-r from-goldPrimary to-goldButton text-white shadow-[0_0_10px_rgba(212,175,55,0.4)]'
                                     : 'text-slate-400 hover:text-white'
                                     }`}
@@ -41,19 +41,21 @@ export default function Navbar() {
                         ))}
                     </div>
 
+                    {/* Call — icon only on mobile */}
                     <a
                         href="tel:+998555190005"
-                        className="flex items-center justify-center whitespace-nowrap space-x-2 min-w-[40px] sm:min-w-[110px] px-5 py-2.5 rounded text-sm font-medium transition-all text-white hover:text-goldPrimary"
+                        className="flex items-center justify-center text-white hover:text-goldPrimary transition-colors p-1"
                     >
-                        <Phone className="w-4 h-4 shrink-0" />
-                        <span className="hidden sm:inline">{t.navbar.callHotel}</span>
+                        <Phone className="w-5 h-5 shrink-0" />
                     </a>
+
+                    {/* Book button — icon + short text on mobile */}
                     <Link
                         href="#booking"
-                        className="flex items-center justify-center whitespace-nowrap space-x-2 min-w-[120px] px-6 py-2.5 bg-gradient-to-r from-goldPrimary to-goldButton text-white rounded text-sm font-semibold tracking-wider uppercase shadow-[0_0_15px_rgba(212,175,55,0.3)] hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transition-all transform hover:-translate-y-0.5"
+                        className="flex items-center justify-center gap-1.5 px-3 sm:px-6 py-2 sm:py-2.5 bg-gradient-to-r from-goldPrimary to-goldButton text-white rounded text-xs sm:text-sm font-semibold tracking-wider uppercase shadow-[0_0_15px_rgba(212,175,55,0.3)] hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transition-all whitespace-nowrap"
                     >
                         <CheckCircle className="w-4 h-4 shrink-0" />
-                        <span>{t.navbar.bookDirect}</span>
+                        <span className="hidden xs:inline sm:inline">{t.navbar.bookDirect}</span>
                     </Link>
                 </div>
             </div>

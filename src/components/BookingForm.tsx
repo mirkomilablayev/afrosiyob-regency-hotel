@@ -27,7 +27,7 @@ export default function BookingForm() {
     };
 
     return (
-        <section id="booking" className="py-40 bg-background relative border-y border-white/5 overflow-hidden">
+        <section id="booking" className="py-16 md:py-40 bg-background relative border-y border-white/5 overflow-hidden">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[800px] max-w-7xl bg-goldPrimary/5 blur-[150px] rounded-full pointer-events-none" />
 
             <div className="max-w-5xl mx-auto px-6 lg:px-8 relative z-10">
@@ -48,10 +48,10 @@ export default function BookingForm() {
                 <div className="reveal opacity-0" style={{ animationDelay: '0.2s' }}>
                     <form
                         onSubmit={handleSubmit}
-                        className="bg-cardBg/60 backdrop-blur-2xl border border-white/10 p-10 md:p-14 rounded-xl shadow-[0_30px_60px_rgba(0,0,0,0.6)] space-y-10"
+                        className="bg-cardBg/60 backdrop-blur-2xl border border-white/10 p-5 sm:p-8 md:p-14 rounded-xl shadow-[0_30px_60px_rgba(0,0,0,0.6)] space-y-6 md:space-y-10"
                     >
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
                             <div className="space-y-4">
                                 <label htmlFor="checkIn" className="text-xs tracking-widest uppercase font-medium text-slate-400 flex items-center">
                                     <Calendar className="w-4 h-4 mr-3 text-goldPrimary" />
@@ -64,7 +64,7 @@ export default function BookingForm() {
                                     required
                                     value={formData.checkIn}
                                     onChange={handleChange}
-                                    className="w-full bg-background/50 border border-white/5 rounded-sm px-6 py-5 text-white placeholder-slate-600 focus:outline-none focus:ring-1 focus:ring-goldPrimary focus:border-goldPrimary transition-all appearance-none"
+                                    className="w-full bg-background/50 border border-white/5 rounded-sm px-4 py-3.5 sm:px-6 sm:py-5 text-sm sm:text-base text-white placeholder-slate-600 focus:outline-none focus:ring-1 focus:ring-goldPrimary focus:border-goldPrimary transition-all appearance-none"
                                 />
                             </div>
 
@@ -80,7 +80,7 @@ export default function BookingForm() {
                                     required
                                     value={formData.checkOut}
                                     onChange={handleChange}
-                                    className="w-full bg-background/50 border border-white/5 rounded-sm px-6 py-5 text-white placeholder-slate-600 focus:outline-none focus:ring-1 focus:ring-goldPrimary focus:border-goldPrimary transition-all appearance-none"
+                                    className="w-full bg-background/50 border border-white/5 rounded-sm px-4 py-3.5 sm:px-6 sm:py-5 text-sm sm:text-base text-white placeholder-slate-600 focus:outline-none focus:ring-1 focus:ring-goldPrimary focus:border-goldPrimary transition-all appearance-none"
                                 />
                             </div>
 
@@ -94,7 +94,7 @@ export default function BookingForm() {
                                     name="guests"
                                     value={formData.guests}
                                     onChange={handleChange}
-                                    className="w-full bg-background/50 border border-white/5 rounded-sm px-6 py-5 text-white placeholder-slate-600 focus:outline-none focus:ring-1 focus:ring-goldPrimary focus:border-goldPrimary transition-all appearance-none"
+                                    className="w-full bg-background/50 border border-white/5 rounded-sm px-4 py-3.5 sm:px-6 sm:py-5 text-sm sm:text-base text-white placeholder-slate-600 focus:outline-none focus:ring-1 focus:ring-goldPrimary focus:border-goldPrimary transition-all appearance-none"
                                 >
                                     <option value="1" className="text-black">1 {t.booking.adult}</option>
                                     <option value="2" className="text-black">2 {t.booking.adults}</option>
@@ -114,7 +114,7 @@ export default function BookingForm() {
                                     name="roomType"
                                     value={formData.roomType}
                                     onChange={handleChange}
-                                    className="w-full bg-background/50 border border-white/5 rounded-sm px-6 py-5 text-white placeholder-slate-600 focus:outline-none focus:ring-1 focus:ring-goldPrimary focus:border-goldPrimary transition-all appearance-none"
+                                    className="w-full bg-background/50 border border-white/5 rounded-sm px-4 py-3.5 sm:px-6 sm:py-5 text-sm sm:text-base text-white placeholder-slate-600 focus:outline-none focus:ring-1 focus:ring-goldPrimary focus:border-goldPrimary transition-all appearance-none"
                                 >
                                     <option value={t.rooms.types.double} className="text-black">{t.rooms.types.double}</option>
                                     <option value={t.rooms.types.twin} className="text-black">{t.rooms.types.twin}</option>
@@ -135,14 +135,14 @@ export default function BookingForm() {
                                     placeholder="+998 __ ___ __ __"
                                     value={formData.phone}
                                     onChange={handleChange}
-                                    className="w-full bg-background/50 border border-white/5 rounded-sm px-6 py-5 text-white placeholder-slate-600 focus:outline-none focus:ring-1 focus:ring-goldPrimary focus:border-goldPrimary transition-all"
+                                    className="w-full bg-background/50 border border-white/5 rounded-sm px-4 py-3.5 sm:px-6 sm:py-5 text-sm sm:text-base text-white placeholder-slate-600 focus:outline-none focus:ring-1 focus:ring-goldPrimary focus:border-goldPrimary transition-all"
                                 />
                             </div>
                         </div>
 
                         <button
                             type="submit"
-                            className="w-full mt-10 bg-gradient-to-r from-goldPrimary to-goldButton hover:from-goldButton hover:to-goldPrimary text-white tracking-widest uppercase text-sm font-bold py-6 rounded-sm transition-all duration-300 transform hover:-translate-y-1 shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:shadow-[0_0_30px_rgba(212,175,55,0.5)]"
+                            className="w-full mt-4 md:mt-10 bg-gradient-to-r from-goldPrimary to-goldButton hover:from-goldButton hover:to-goldPrimary text-white tracking-widest uppercase text-sm font-bold py-4 sm:py-6 rounded-sm transition-all duration-300 transform hover:-translate-y-1 shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:shadow-[0_0_30px_rgba(212,175,55,0.5)]"
                         >
                             {t.booking.submit}
                         </button>
