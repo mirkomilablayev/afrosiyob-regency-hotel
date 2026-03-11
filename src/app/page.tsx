@@ -5,6 +5,7 @@ import Rooms from '@/components/Rooms';
 import Reviews from '@/components/Reviews';
 import Gallery from '@/components/Gallery';
 import BookingForm from '@/components/BookingForm';
+import FAQ from '@/components/FAQ';
 import Location from '@/components/Location';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -19,6 +20,7 @@ export default function Home() {
       <Reviews />
       <Gallery />
       <BookingForm />
+      <FAQ />
       <Location />
       <Contact />
       <Footer />

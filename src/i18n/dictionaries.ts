@@ -106,6 +106,18 @@ export const dictionaries = {
             submit: "Band qilishni so'rash",
             whatsappMsg: "Mehmonxona band qilish so'rovi:"
         },
+        faq: {
+            tag: "Ma'lumotlar",
+            title: "Ko'p so'raladigan savollar",
+            q1: "Kelish va ketish vaqtlari qanday?",
+            a1: "Kelish vaqti 14:00 dan, ketish vaqti esa 12:00 gacha. Ehtiyojingizga qarab erta kelish yoki kech ketish imkoniyatlarini taklif qilishimiz mumkin.",
+            q2: "Bekor qilish siyosati qanday?",
+            a2: "Aksariyat xaridlarda kelish kuningizdan 24 soat oldin bepul bekor qilishingiz mumkin. Katta bayramlar damlarida qoidalar o'zgarishi mumkin.",
+            q3: "Aeroportdan transfer xizmati bormi?",
+            a3: "Ha, biz aeroportdan mehmonxonagacha pullik transfer xizmatini taklif qilamiz. Iltimos, band qilish vaqtida yoki biz bilan oldindan bog'lanib, bu haqda xabar bering.",
+            q4: "Mehmonxonada avtoturargoh bormi?",
+            a4: "Ha, mehmonlarimiz uchun 24/7 qo'riqlanadigan xavfsiz va bepul avtoturargoh mavjud."
+        },
         location: {
             tag: "Joylashuv",
             title: "Bizni Toshkentdan toping",
@@ -247,6 +259,18 @@ export const dictionaries = {
             submit: "Request Booking",
             whatsappMsg: "Hotel Booking Request:"
         },
+        faq: {
+            tag: "Information",
+            title: "Frequently Asked Questions",
+            q1: "What are the check-in and check-out times?",
+            a1: "Check-in is from 14:00, and check-out is until 12:00. We can arrange early check-in or late check-out upon request, subject to availability.",
+            q2: "What is your cancellation policy?",
+            a2: "For most reservations, you can cancel for free up to 24 hours before your arrival date. Policies may vary during major holidays and events.",
+            q3: "Do you provide airport transfer?",
+            a3: "Yes, we offer an airport transfer service for an additional fee. Please request this during booking or contact us in advance.",
+            q4: "Is there parking available at the hotel?",
+            a4: "Yes, we provide free, secure 24/7 guarded parking for all our guests."
+        },
         location: {
             tag: "Location",
             title: "Find Us in Tashkent",
@@ -387,6 +411,18 @@ export const dictionaries = {
             phone: "Номер телефона",
             submit: "Оставить заявку",
             whatsappMsg: "Заявка на бронирование:"
+        },
+        faq: {
+            tag: "Информация",
+            title: "Часто задаваемые вопросы",
+            q1: "Какое время заезда и выезда?",
+            a1: "Время заезда — с 14:00, время выезда — до 12:00. При наличии возможности мы можем организовать ранний заезд или поздний выезд по запросу.",
+            q2: "Какова ваша политика отмены бронирования?",
+            a2: "В большинстве случаев вы можете бесплатно отменить бронирование за 24 часа до даты заезда. Правила могут меняться в период праздников и крупных мероприятий.",
+            q3: "Предоставляете ли вы трансфер от/до аэропорта?",
+            a3: "Да, мы предлагаем услугу трансфера из аэропорта за дополнительную плату. Пожалуйста, сообщите нам об этом при бронировании или свяжитесь с нами заранее.",
+            q4: "Есть ли парковка на территории отеля?",
+            a4: "Да, для всех наших гостей предоставляется бесплатная охраняемая парковка 24/7."
         },
         location: {
             tag: "Расположение",
