@@ -83,7 +83,7 @@ export default function Contact() {
                                 </a>
 
                                 <a
-                                    href="https://t.me/yourtelegramid"
+                                    href="https://t.me/mirkomil_ablayev"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex font-medium tracking-widest uppercase text-sm items-center justify-center w-full py-5 px-6 bg-[#2AABEE]/10 border border-[#2AABEE]/20 hover:border-[#2AABEE] text-white rounded transition-all duration-300 hover:shadow-[0_0_20px_rgba(42,171,238,0.2)] group"
