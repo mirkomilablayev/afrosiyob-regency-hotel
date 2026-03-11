@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { Star, StarHalf } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -14,7 +14,7 @@ function ReviewCard({ review, t }: { review: { id: number; text: string; author:
                 ))}
             </div>
             <p className="text-slate-300 text-lg leading-loose mb-10 italic relative z-10 font-serif flex-1">
-                "{review.text}"
+                &ldquo;{review.text}&rdquo;
             </p>
             <div className="flex items-center mt-auto border-t border-white/5 pt-8">
                 <div className="w-12 h-12 rounded-full bg-secondaryBg flex items-center justify-center text-goldPrimary border border-goldPrimary/20 font-serif text-lg shrink-0">
@@ -32,7 +32,6 @@ function ReviewCard({ review, t }: { review: { id: number; text: string; author:
 export default function Reviews() {
     const { t } = useLanguage();
     const [activeIdx, setActiveIdx] = useState(0);
-    const touchStartX = useRef<number | null>(null);
 
     const reviews = [
         { id: 1, text: t.reviews.review1, author: t.reviews.author1 },
@@ -40,22 +39,8 @@ export default function Reviews() {
         { id: 3, text: t.reviews.review3, author: t.reviews.author3 },
         { id: 4, text: t.reviews.review4, author: t.reviews.author4 },
         { id: 5, text: t.reviews.review5, author: t.reviews.author5 },
-        { id: 6, text: t.reviews.review6, author: t.reviews.author6 }
+        { id: 6, text: t.reviews.review6, author: t.reviews.author6 },
     ];
-
-    const handleTouchStart = (e: React.TouchEvent) => {
-        touchStartX.current = e.touches[0].clientX;
-    };
-
-    const handleTouchEnd = (e: React.TouchEvent) => {
-        if (touchStartX.current === null) return;
-        const diff = touchStartX.current - e.changedTouches[0].clientX;
-        if (Math.abs(diff) > 40) {
-            if (diff > 0) setActiveIdx(prev => Math.min(prev + 1, reviews.length - 1));
-            else setActiveIdx(prev => Math.max(prev - 1, 0));
-        }
-        touchStartX.current = null;
-    };
 
     return (
         <section id="reviews" className="py-32 bg-background relative border-b border-white/5">
@@ -72,7 +57,7 @@ export default function Reviews() {
                         <h2 className="text-4xl md:text-6xl font-serif text-white font-bold mb-6">
                             {t.reviews.title}
                         </h2>
-                        <div className="w-16 h-px bg-goldPrimary rounded-full lg:mx-0 mx-auto"></div>
+                        <div className="w-16 h-px bg-goldPrimary rounded-full lg:mx-0 mx-auto" />
                     </div>
 
                     <div className="flex items-center space-x-8 bg-cardBg border border-white/10 px-10 py-8 rounded-xl shadow-2xl">
@@ -90,34 +75,26 @@ export default function Reviews() {
                     </div>
                 </div>
 
-                {/* ── MOBILE: Swipeable carousel ── */}
+                {/* ── MOBILE: One card at a time ── */}
                 <div className="md:hidden">
-                    <div
-                        className="overflow-hidden"
-                        onTouchStart={handleTouchStart}
-                        onTouchEnd={handleTouchEnd}
-                    >
-                        <div
-                            className="flex transition-transform duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
-                            style={{ transform: `translateX(-${activeIdx * 100}%)` }}
-                        >
-                            {reviews.map((review) => (
-                                <div key={review.id} className="w-full shrink-0 px-1">
-                                    <ReviewCard review={review} t={t} />
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+
+                    {/* Only the active review is rendered */}
+                    <ReviewCard review={reviews[activeIdx]} t={t} />
+
+                    {/* Counter */}
+                    <p className="text-center text-slate-500 text-xs tracking-widest uppercase mt-6 mb-4">
+                        {activeIdx + 1} / {reviews.length}
+                    </p>
 
                     {/* Dot indicators */}
-                    <div className="flex justify-center items-center space-x-2 mt-8">
+                    <div className="flex justify-center items-center space-x-2 mb-6">
                         {reviews.map((_, idx) => (
                             <button
                                 key={idx}
                                 onClick={() => setActiveIdx(idx)}
                                 className={`rounded-full transition-all duration-300 ${idx === activeIdx
-                                    ? 'w-6 h-2 bg-goldPrimary shadow-[0_0_8px_rgba(212,175,55,0.6)]'
-                                    : 'w-2 h-2 bg-white/20 hover:bg-white/40'
+                                        ? 'w-6 h-2 bg-goldPrimary shadow-[0_0_8px_rgba(212,175,55,0.6)]'
+                                        : 'w-2 h-2 bg-white/20 hover:bg-white/40'
                                     }`}
                                 aria-label={`Review ${idx + 1}`}
                             />
@@ -125,7 +102,7 @@ export default function Reviews() {
                     </div>
 
                     {/* Prev / Next buttons */}
-                    <div className="flex items-center justify-between mt-6 gap-4">
+                    <div className="flex gap-4">
                         <button
                             onClick={() => setActiveIdx(prev => Math.max(prev - 1, 0))}
                             disabled={activeIdx === 0}
@@ -133,9 +110,6 @@ export default function Reviews() {
                         >
                             ← Prev
                         </button>
-                        <span className="text-slate-500 text-xs font-medium shrink-0">
-                            {activeIdx + 1} / {reviews.length}
-                        </span>
                         <button
                             onClick={() => setActiveIdx(prev => Math.min(prev + 1, reviews.length - 1))}
                             disabled={activeIdx === reviews.length - 1}
@@ -144,6 +118,7 @@ export default function Reviews() {
                             Next →
                         </button>
                     </div>
+
                 </div>
 
                 {/* ── DESKTOP: 3-column grid ── */}
